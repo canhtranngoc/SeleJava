@@ -1,0 +1,48 @@
+
+https://github.com/
+
+dang ky account day
+
+https://git-scm.com/downloads
+
+download git client day
+
+https://help.github.com/articles/cloning-a-repository/
+
+git clone day
+
+
+https://seleniumhq.github.io/selenium/docs/api/java/
+
+java doc day
+
+tat ca cac methods of selenium
+
+nam o day het
+
+
+
+5053, 1:53 PM
+https://www.guru99.com/implicit-explicit-waits-selenium.html
+
+
+
+5053, 1:53 PM
+dung Explicit Wait va Fluent Wait
+
+send bai tap trc ngay 20
+
+
+
+
+
+5053, 2:03 PM
+http://toolsqa.com/selenium-webdriver/install-testng/
+
+cai xog eclipse 
+
+cai TestNG nhu ri nghe
+
+
+053, 2:07 PM
+http://toolsqa.com/java/maven/create-new-maven-project-eclipse/
