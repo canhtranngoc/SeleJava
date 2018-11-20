@@ -2,7 +2,7 @@ package Railway;
 import Constant.Constant;
 public class HomePage extends GeneralPage {
 
-	//Locators
+//Locators
 
 //Element
 

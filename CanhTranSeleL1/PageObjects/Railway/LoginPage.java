@@ -5,42 +5,37 @@ import org.openqa.selenium.WebElement;
 import Constant.Constant;
 
 public class LoginPage extends GeneralPage {
-	//Locators
 	
-	private final By _txtUsername = By.xpath("//input[@id='username']");
-	private final By _txtPassword = By.xpath("//input[@id='password']");
-	private final By _btnLogin = By.xpath("//input[@value='login']");
-	private final By _btnLogout = By.xpath("//input[@value='logout']");
-	private final By _lblLoginErrorMsg = By.xpath("//p[@class='message error LoginForm']");
+	//Locators	
+	private final By txtUsername = By.xpath("//input[@id='username']");
+	private final By txtPassword = By.xpath("//input[@id='password']");
+	private final By btnLogin = By.xpath("//input[@value='login']");
+	private final By lblLoginErrorMsg = By.xpath("//p[@class='message error LoginForm']");
 
 	//Elements	
-	public WebElement getTxtUsername() {
-		return Constant.WEBDRIVER.findElement(_txtUsername);
+	public WebElement username() {
+		return Constant.WEBDRIVER.findElement(txtUsername);
 	}
 	
-	public WebElement getTxtPassword() {
-		return Constant.WEBDRIVER.findElement(_txtPassword);
+	public WebElement password() {
+		return Constant.WEBDRIVER.findElement(txtPassword);
 	}
 	
-	public WebElement getBtnLogin() {
-		return Constant.WEBDRIVER.findElement(_btnLogin);
+	public WebElement login() {
+		return Constant.WEBDRIVER.findElement(btnLogin);
 	}
 	
-	public WebElement getBtnLogout() {
-		return Constant.WEBDRIVER.findElement(_btnLogout);
-	}
-	
-	public WebElement getLblLoginErrorMsg() {
-		return Constant.WEBDRIVER.findElement(_lblLoginErrorMsg);
+	public WebElement errorLoginMessage() {
+		return Constant.WEBDRIVER.findElement(lblLoginErrorMsg);
 	}
 	
 	//Methods
 	public HomePage login(String username, String password)
 	{
 		//Submit login credentials
-		this.getTxtUsername().sendKeys(username);
-		this.getTxtPassword().sendKeys(password);
-		this.getBtnLogin().click();
+		this.username().sendKeys(username);
+		this.password().sendKeys(password);
+		this.login().click();
 
 		//Land on homepage
 		return new HomePage();
@@ -48,9 +43,32 @@ public class LoginPage extends GeneralPage {
 	
 	public HomePage logout()
 	{
-		this.getBtnLogout().click();
+		this.tabLogout().click();
 		return new HomePage();
 	}
 
+	
+	public String getErrorLoginMessage()
+	{
+		return this.errorLoginMessage().getText();
+	}
+		
+	public void loginFailServeralTimes(String username, String password, int time)
+    {
+        for (int i = 0; i < time; i++)
+        {
+            this.username().clear();
+        	this.username().sendKeys(username);
+        	
+        	this.password().clear();
+        	this.password().sendKeys(password);
+        	
+        	this.login().click();
+                	
+        }
+    }
+	
+	
+	
 	
 }

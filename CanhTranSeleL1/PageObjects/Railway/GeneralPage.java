@@ -10,47 +10,43 @@ import Constant.Constant;
 public class GeneralPage {
 	//Locators
 		private final By tabLogin=By.xpath("//a[@href='/Account/Login.cshtml']");
+		
+		
 		private final By tabLogout=By.xpath("//a[@href='/Account/Logout']");
 		private final By tabBookTicket=By.xpath("//a[@href='/Page/BookTicketPage.cshtml']");
-		private final By lblWelcomeMessage=By.xpath("//div[@class='account']");
-		private final By lblErrorMessage=By.xpath("//p[@class='message error LoginForm']");
-		
+		private final By welcomeMessage=By.xpath("//div[@class='account']");
+				
 		//Elements
-			protected WebElement getTabLogin() {
+			protected WebElement tabLogin() {
 				return Constant.WEBDRIVER.findElement(tabLogin);
 			}
 			
-			protected WebElement getTabLogout() {
+								
+			protected WebElement tabLogout() {
 				return Constant.WEBDRIVER.findElement(tabLogout);
 			}
 			
-			protected WebElement getTabBookTicket() {
+			protected WebElement tabBookTicket() {
 				return Constant.WEBDRIVER.findElement(tabBookTicket);
 			}
 			
-			protected WebElement getLblWelcomeMessage() {
-				return Constant.WEBDRIVER.findElement(lblWelcomeMessage);
+			protected WebElement welcomeMessage() {
+				return Constant.WEBDRIVER.findElement(welcomeMessage);
 			}
-			
-			protected WebElement getLblLoginErrorMsg() {
-				return Constant.WEBDRIVER.findElement(lblErrorMessage);
-			}
+					
 			
 			//Methods
 			
 			public String getWelcomeMessage()
 			{
-				return this.getLblWelcomeMessage().getText();
+				return this.welcomeMessage().getText();
 			}
 			
-			public String getErrorMessage()
-			{
-				return this.getLblLoginErrorMsg().getText();
-			}
+
 			
 			public LoginPage gotoLoginPage()
 			{
-				this.getTabLogin().click();
+				this.tabLogin().click();
 				return new LoginPage();
 			}
 						
