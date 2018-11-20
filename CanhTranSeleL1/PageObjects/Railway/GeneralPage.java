@@ -9,7 +9,6 @@ import Constant.Constant;
 	
 public class GeneralPage {
 	//Locators
-		private final By lblPage = By.xpath("//h1[normalize-space()]");
 		private final By tabLogin=By.xpath("//a[@href='/Account/Login.cshtml']");
 		private final By tabLogout=By.xpath("//a[@href='/Account/Logout']");
 		private final By tabBookTicket=By.xpath("//a[@href='/Page/BookTicketPage.cshtml']");

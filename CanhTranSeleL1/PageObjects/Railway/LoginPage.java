@@ -37,7 +37,7 @@ public class LoginPage extends GeneralPage {
 	//Methods
 	public HomePage login(String username, String password)
 	{
-		//Submit login credenticals
+		//Submit login credentials
 		this.getTxtUsername().sendKeys(username);
 		this.getTxtPassword().sendKeys(password);
 		this.getBtnLogin().click();
