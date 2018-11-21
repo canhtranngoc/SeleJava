@@ -2,40 +2,40 @@
 <testng-results skipped="0" failed="2" ignored="0" total="5" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="61544" started-at="2018-11-20T18:39:38Z" finished-at="2018-11-20T18:40:39Z">
+  <suite name="Default suite" duration-ms="48909" started-at="2018-11-21T02:13:27Z" finished-at="2018-11-21T02:14:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="61544" started-at="2018-11-20T18:39:38Z" finished-at="2018-11-20T18:40:39Z">
+    <test name="Default test" duration-ms="48909" started-at="2018-11-21T02:13:27Z" finished-at="2018-11-21T02:14:16Z">
       <class name="Railway.LoginTest">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@14acaea5]" name="beforeMethod" is-config="true" duration-ms="4609" started-at="2018-11-20T18:39:38Z" finished-at="2018-11-20T18:39:43Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@6a41eaa2]" name="beforeMethod" is-config="true" duration-ms="5523" started-at="2018-11-21T02:13:27Z" finished-at="2018-11-21T02:13:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC01()[pri:0, instance:Railway.LoginTest@14acaea5]" name="TC01" duration-ms="9492" started-at="2018-11-20T18:39:43Z" description="User can log into Railway with valid username and password" finished-at="2018-11-20T18:39:52Z">
+        <test-method status="PASS" signature="TC01()[pri:0, instance:Railway.LoginTest@6a41eaa2]" name="TC01" duration-ms="6890" started-at="2018-11-21T02:13:33Z" description="User can log into Railway with valid username and password" finished-at="2018-11-21T02:13:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC01 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@14acaea5]" name="afterMethod" is-config="true" duration-ms="582" started-at="2018-11-20T18:39:52Z" finished-at="2018-11-20T18:39:53Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@6a41eaa2]" name="afterMethod" is-config="true" duration-ms="580" started-at="2018-11-21T02:13:40Z" finished-at="2018-11-21T02:13:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@14acaea5]" name="beforeMethod" is-config="true" duration-ms="3634" started-at="2018-11-20T18:39:53Z" finished-at="2018-11-20T18:39:56Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@6a41eaa2]" name="beforeMethod" is-config="true" duration-ms="3335" started-at="2018-11-21T02:13:40Z" finished-at="2018-11-21T02:13:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC02()[pri:0, instance:Railway.LoginTest@14acaea5]" name="TC02" duration-ms="7818" started-at="2018-11-20T18:39:56Z" description="User can&#039;t login with blank &quot;Username&quot; textbox" finished-at="2018-11-20T18:40:04Z">
+        <test-method status="PASS" signature="TC02()[pri:0, instance:Railway.LoginTest@6a41eaa2]" name="TC02" duration-ms="4769" started-at="2018-11-21T02:13:44Z" description="User can&#039;t login with blank &quot;Username&quot; textbox" finished-at="2018-11-21T02:13:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC02 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@14acaea5]" name="afterMethod" is-config="true" duration-ms="577" started-at="2018-11-20T18:40:04Z" finished-at="2018-11-20T18:40:05Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@6a41eaa2]" name="afterMethod" is-config="true" duration-ms="585" started-at="2018-11-21T02:13:48Z" finished-at="2018-11-21T02:13:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@14acaea5]" name="beforeMethod" is-config="true" duration-ms="3674" started-at="2018-11-20T18:40:05Z" finished-at="2018-11-20T18:40:08Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@6a41eaa2]" name="beforeMethod" is-config="true" duration-ms="4376" started-at="2018-11-21T02:13:49Z" finished-at="2018-11-21T02:13:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="TC03()[pri:0, instance:Railway.LoginTest@14acaea5]" name="TC03" duration-ms="9260" started-at="2018-11-20T18:40:08Z" description="User cannot log into Railway with invalid password " finished-at="2018-11-20T18:40:18Z">
+        <test-method status="FAIL" signature="TC03()[pri:0, instance:Railway.LoginTest@6a41eaa2]" name="TC03" duration-ms="5734" started-at="2018-11-21T02:13:53Z" description="User cannot log into Railway with invalid password " finished-at="2018-11-21T02:13:59Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The text should be: There was a problem with your login and/or errors exist in your form. expected [There was a problem with your login and/or errors exist in your form.] but found [Invalid username or password. Please try again.]]]>
@@ -80,33 +80,33 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC03 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@14acaea5]" name="afterMethod" is-config="true" duration-ms="593" started-at="2018-11-20T18:40:18Z" finished-at="2018-11-20T18:40:18Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@6a41eaa2]" name="afterMethod" is-config="true" duration-ms="596" started-at="2018-11-21T02:13:59Z" finished-at="2018-11-21T02:14:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@14acaea5]" name="beforeMethod" is-config="true" duration-ms="3651" started-at="2018-11-20T18:40:18Z" finished-at="2018-11-20T18:40:22Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@6a41eaa2]" name="beforeMethod" is-config="true" duration-ms="3807" started-at="2018-11-21T02:14:00Z" finished-at="2018-11-21T02:14:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC04()[pri:0, instance:Railway.LoginTest@14acaea5]" name="TC04" duration-ms="1" started-at="2018-11-20T18:40:22Z" description="Login page displays when un-logged User clicks on &quot;Book ticket&quot; tab" finished-at="2018-11-20T18:40:22Z">
+        <test-method status="PASS" signature="TC04()[pri:0, instance:Railway.LoginTest@6a41eaa2]" name="TC04" duration-ms="1" started-at="2018-11-21T02:14:04Z" description="Login page displays when un-logged User clicks on &quot;Book ticket&quot; tab" finished-at="2018-11-21T02:14:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC04 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@14acaea5]" name="afterMethod" is-config="true" duration-ms="771" started-at="2018-11-20T18:40:22Z" finished-at="2018-11-20T18:40:23Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@6a41eaa2]" name="afterMethod" is-config="true" duration-ms="591" started-at="2018-11-21T02:14:04Z" finished-at="2018-11-21T02:14:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@14acaea5]" name="beforeMethod" is-config="true" duration-ms="3670" started-at="2018-11-20T18:40:23Z" finished-at="2018-11-20T18:40:26Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@6a41eaa2]" name="beforeMethod" is-config="true" duration-ms="3804" started-at="2018-11-21T02:14:04Z" finished-at="2018-11-21T02:14:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="TC05()[pri:0, instance:Railway.LoginTest@14acaea5]" name="TC05" duration-ms="12576" started-at="2018-11-20T18:40:26Z" description="System shows message when user enters wrong password several times" finished-at="2018-11-20T18:40:39Z">
+        <test-method status="FAIL" signature="TC05()[pri:0, instance:Railway.LoginTest@6a41eaa2]" name="TC05" duration-ms="7660" started-at="2018-11-21T02:14:08Z" description="System shows message when user enters wrong password several times" finished-at="2018-11-21T02:14:16Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The text should be: There was a problem with your login and/or errors exist in your form. expected [There was a problem with your login and/or errors exist in your form.] but found [Invalid username or password. Please try again.]]]>
+              <![CDATA[The text should be: You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes. expected [You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.] but found [Invalid username or password. Please try again.]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The text should be: There was a problem with your login and/or errors exist in your form. expected [There was a problem with your login and/or errors exist in your form.] but found [Invalid username or password. Please try again.]
+              <![CDATA[java.lang.AssertionError: The text should be: You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes. expected [You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.] but found [Invalid username or password. Please try again.]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
@@ -145,7 +145,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC05 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@14acaea5]" name="afterMethod" is-config="true" duration-ms="590" started-at="2018-11-20T18:40:39Z" finished-at="2018-11-20T18:40:39Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@6a41eaa2]" name="afterMethod" is-config="true" duration-ms="620" started-at="2018-11-21T02:14:16Z" finished-at="2018-11-21T02:14:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->

@@ -16,7 +16,7 @@ public class LoginTest{
 	@BeforeMethod
 	public void beforeMethod() {
 		System.out.println("Pre-conditions");
-		System.setProperty("webdriver.chrome.driver", "D:\\CanhBongMieu_CamXoa\\SeleJavaL1\\SeleJava\\CanhTranSeleL1\\Executables\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "Executables\\chromedriver.exe");
 		Constant.WEBDRIVER = new ChromeDriver();
 		Constant.WEBDRIVER.manage().window().maximize();
 	}
