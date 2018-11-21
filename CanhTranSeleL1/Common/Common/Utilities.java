@@ -2,6 +2,7 @@ package Common;
 
 import org.testng.Assert;
 
+
 public class Utilities {
 	public static void checkTextDisplays( String actualText, String expectedText )
 	{

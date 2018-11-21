@@ -1,5 +1,7 @@
 package Constant;
 
+import java.sql.Date;
+
 import org.openqa.selenium.WebDriver;
 
 
@@ -14,6 +16,8 @@ public class Constant {
 	public static final String INVALID_PASSWORD = "11111111";
 	public static final String BLANK_PASSWORD = "";
 	public static final String NEW_PASSWORD = "123456789";
+	
+	public static final String RANDOM_EMAIL="canh.tran+random+email@invoice2go.com";
 	
 	public static final String welcomeMessage = "Welcome " + VALID_USERNAME;
 		

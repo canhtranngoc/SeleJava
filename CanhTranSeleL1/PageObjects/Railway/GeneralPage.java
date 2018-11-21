@@ -10,18 +10,23 @@ import Constant.Constant;
 public class GeneralPage {
 	//Locators
 		private final By tabLogin=By.xpath("//a[@href='/Account/Login.cshtml']");
+		private final By tabRegister=By.xpath("//span[.='Register']");
 		
-		
-		private final By tabLogout=By.xpath("//a[@href='/Account/Logout']");
 		private final By tabBookTicket=By.xpath("//a[@href='/Page/BookTicketPage.cshtml']");
+		private final By tabLogout=By.xpath("//a[@href='/Account/Logout']");
+		
 		private final By welcomeMessage=By.xpath("//div[@class='account']");
+		
 				
 		//Elements
 			protected WebElement tabLogin() {
 				return Constant.WEBDRIVER.findElement(tabLogin);
 			}
 			
-								
+			protected WebElement tabRegister() {
+				return Constant.WEBDRIVER.findElement(tabRegister);
+			}
+											
 			protected WebElement tabLogout() {
 				return Constant.WEBDRIVER.findElement(tabLogout);
 			}
@@ -41,14 +46,16 @@ public class GeneralPage {
 			{
 				return this.welcomeMessage().getText();
 			}
-			
-
-			
+						
 			public LoginPage gotoLoginPage()
 			{
 				this.tabLogin().click();
 				return new LoginPage();
 			}
 						
-				
+			public 	RegisterPage gotoRegisterPage() 
+			{
+				this.tabRegister().click();
+				return new RegisterPage();
+			}
 }
