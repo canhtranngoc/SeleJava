@@ -1,6 +1,7 @@
 package Constant;
 
 import java.sql.Date;
+import Common.Utilities;
 
 import org.openqa.selenium.WebDriver;
 
@@ -17,7 +18,8 @@ public class Constant {
 	public static final String BLANK_PASSWORD = "";
 	public static final String NEW_PASSWORD = "123456789";
 	
-	public static final String RANDOM_EMAIL="canh.tran+random+email@invoice2go.com";
+	public static final String RANDOM_EMAIL=Utilities.randomEmail();
+	public static final String VALIDPID="123456789";
 	
 	public static final String welcomeMessage = "Welcome " + VALID_USERNAME;
 		
@@ -25,5 +27,7 @@ public class Constant {
 	public static final String errorLoginMessageForServeralTimes = "You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.";
     public static final String errorLoginMessageInvalidPassword = "There was a problem with your login and/or errors exist in your form.";
 	
+    public static final String thanksRegisteringMessage = "Thank you for registering your account";
+    
     public static final int serveralTimeLoginFail = 4;
 }

@@ -19,11 +19,11 @@ public class CreateAccountTest {
 		Constant.WEBDRIVER.manage().window().maximize();
 	}
 	
-	@AfterMethod
-	public void afterMethod() {
-		System.out.println("Post-condition");
-		Constant.WEBDRIVER.quit();
-	}
+	//@AfterMethod
+	//public void afterMethod() {
+	//	System.out.println("Post-condition");
+	//	Constant.WEBDRIVER.quit();
+	//}
 	
 	@Test(description = "User can create new account")
 	public void TC07() {
@@ -34,8 +34,7 @@ public class CreateAccountTest {
 		RegisterPage registerPage = homePage.gotoRegisterPage();
 		registerPage.registerAccount(Constant.RANDOM_EMAIL, Constant.VALID_PASSWORD, Constant.VALID_PASSWORD, Constant.VALID_PASSWORD);
 		
-		
-
+		Utilities.checkTextDisplays(registerPage.getThanksRegisteringMessage(), Constant.thanksRegisteringMessage);
 					
 	}
 	

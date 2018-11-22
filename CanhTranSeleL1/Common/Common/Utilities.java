@@ -1,6 +1,7 @@
 package Common;
 
 import org.testng.Assert;
+import static org.apache.commons.lang3.RandomStringUtils.*;
 
 
 public class Utilities {
@@ -9,4 +10,8 @@ public class Utilities {
 		Assert.assertEquals(actualText, expectedText, "The text should be: " + expectedText);
 	}
 
+	public static String randomEmail() 
+	{
+        return "canh.tran+" + randomAlphabetic(5).toLowerCase() + "@logigear.com";
+    }
 }

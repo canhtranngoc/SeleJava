@@ -17,6 +17,9 @@ public class GeneralPage {
 		
 		private final By welcomeMessage=By.xpath("//div[@class='account']");
 		
+		private final By pageHeader=By.xpath("//div[@id='content']/h1");
+		
+		
 				
 		//Elements
 			protected WebElement tabLogin() {
@@ -39,6 +42,9 @@ public class GeneralPage {
 				return Constant.WEBDRIVER.findElement(welcomeMessage);
 			}
 					
+			protected WebElement pageHeader() {
+				return Constant.WEBDRIVER.findElement(pageHeader);
+			}
 			
 			//Methods
 			
@@ -47,6 +53,12 @@ public class GeneralPage {
 				return this.welcomeMessage().getText();
 			}
 						
+			public String getPageHeader() 
+			{
+				return this.pageHeader().getText();
+			}
+			
+			
 			public LoginPage gotoLoginPage()
 			{
 				this.tabLogin().click();
@@ -58,4 +70,6 @@ public class GeneralPage {
 				this.tabRegister().click();
 				return new RegisterPage();
 			}
+			
+			
 }

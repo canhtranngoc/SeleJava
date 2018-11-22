@@ -2,23 +2,19 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="41541" started-at="2018-11-21T06:16:38Z" finished-at="2018-11-21T06:17:20Z">
+  <suite name="Default suite" duration-ms="14739" started-at="2018-11-22T06:02:36Z" finished-at="2018-11-22T06:02:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="41541" started-at="2018-11-21T06:16:38Z" finished-at="2018-11-21T06:17:20Z">
+    <test name="Default test" duration-ms="14739" started-at="2018-11-22T06:02:36Z" finished-at="2018-11-22T06:02:51Z">
       <class name="Railway.CreateAccountTest">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.CreateAccountTest@6a41eaa2]" name="beforeMethod" is-config="true" duration-ms="34916" started-at="2018-11-21T06:16:38Z" finished-at="2018-11-21T06:17:13Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.CreateAccountTest@7cd62f43]" name="beforeMethod" is-config="true" duration-ms="5294" started-at="2018-11-22T06:02:36Z" finished-at="2018-11-22T06:02:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC07()[pri:0, instance:Railway.CreateAccountTest@6a41eaa2]" name="TC07" duration-ms="5859" started-at="2018-11-21T06:17:13Z" description="User can create new account" finished-at="2018-11-21T06:17:19Z">
+        <test-method status="PASS" signature="TC07()[pri:0, instance:Railway.CreateAccountTest@7cd62f43]" name="TC07" duration-ms="9413" started-at="2018-11-22T06:02:41Z" description="User can create new account" finished-at="2018-11-22T06:02:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC07 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.CreateAccountTest@6a41eaa2]" name="afterMethod" is-config="true" duration-ms="716" started-at="2018-11-21T06:17:19Z" finished-at="2018-11-21T06:17:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
       </class> <!-- Railway.CreateAccountTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
