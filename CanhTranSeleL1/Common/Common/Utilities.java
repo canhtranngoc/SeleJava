@@ -10,13 +10,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Utilities {
 
-	public static void openBrowser() {
+	public static void openChromeBrowser() {
 		System.setProperty("webdriver.chrome.driver", "Executables\\chromedriver.exe");
 		Constant.WEBDRIVER = new ChromeDriver();
 		Constant.WEBDRIVER.manage().window().maximize();
 	}
 
-	public static void closesAllBrowserWindows() {
+	public static void closesAllChromeBrowserWindows() {
 		Constant.WEBDRIVER.quit();
 	}
 

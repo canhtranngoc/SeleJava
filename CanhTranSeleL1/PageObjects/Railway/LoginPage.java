@@ -35,16 +35,15 @@ public class LoginPage extends GeneralPage {
 	}
 
 	// Methods
-	public HomePage login(String username, String password) {
+
+	public String getLoginPageHeader() {
+		return this.loginPageHeader().getText();
+	}
+
+	public void login(String username, String password) {
 		this.username().sendKeys(username);
 		this.password().sendKeys(password);
 		this.login().click();
-		return new HomePage();
-	}
-
-	public HomePage logout() {
-		this.tabLogout().click();
-		return new HomePage();
 	}
 
 	public String getErrorLoginMessage() {

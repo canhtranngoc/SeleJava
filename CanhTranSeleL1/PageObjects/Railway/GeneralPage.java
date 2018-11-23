@@ -74,23 +74,29 @@ public class GeneralPage {
 		return new RegisterPage();
 	}
 
-	public MyTicketPage gotoMyTicKetPage() {
+	public void gotoMyTicKetPage() {
 		this.tabMyTicket().click();
-		return new MyTicketPage();
 	}
-	
-	public ChangePasswordPage gotoChangePasswordPage() {
+
+	public void gotoChangePasswordPage() {
 		this.tabChangePassword().click();
-		return new ChangePasswordPage();
 	}
-	
-	
-	public boolean isTabPresent(String tabName) {
+
+	public boolean isTabdisplay(String tabName) {
 		try {
-			Constant.WEBDRIVER.findElement(By.xpath("//span[.='tabName']"));
+
+			String str = String.format("//span[.='%s']", tabName);
+			Constant.WEBDRIVER.findElement(By.xpath(str));
 			return true;
 		} catch (NoSuchElementException e) {
 			return false;
+		}
+	}
+
+	public void logOut() {
+		// If tab logout displays, then
+		{
+			this.tabLogout().click();
 		}
 	}
 

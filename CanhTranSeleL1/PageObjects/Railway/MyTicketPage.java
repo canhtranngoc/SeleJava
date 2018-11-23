@@ -13,6 +13,9 @@ public class MyTicketPage extends GeneralPage {
 		return Constant.WEBDRIVER.findElement(lblMyTicketPageHeader);
 	}
 	
-	
+	// Methods
+	public String getMyTicketPageHeader() {
+		return this.myTicketPageHeader().getText();
+	}
 	
 }

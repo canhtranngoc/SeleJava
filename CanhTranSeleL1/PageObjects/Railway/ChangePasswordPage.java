@@ -1,4 +1,5 @@
 package Railway;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import Constant.Constant;
@@ -6,11 +7,16 @@ import Constant.Constant;
 public class ChangePasswordPage extends GeneralPage {
 
 	// Locators
-		public final By lblChangePasswordPageHeader = By.xpath("//div[@id='content']/h1");
-		
-		// Elements
-		public WebElement changePasswordPageHeader() {
-			return Constant.WEBDRIVER.findElement(lblChangePasswordPageHeader);
-		}
-	
+	public final By lblChangePasswordPageHeader = By.xpath("//div[@id='content']/h1");
+
+	// Elements
+	public WebElement changePasswordPageHeader() {
+		return Constant.WEBDRIVER.findElement(lblChangePasswordPageHeader);
+	}
+
+	// Methods
+	public String getChangePasswordPageHeader() {
+		return this.changePasswordPageHeader().getText();
+	}
+
 }

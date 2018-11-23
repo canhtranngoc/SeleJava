@@ -18,13 +18,13 @@ public class CreateAccountTest {
 	@BeforeMethod
 	public void beforeMethod() {
 		System.out.println("Pre-conditions");
-		Utilities.openBrowser();
+		Utilities.openChromeBrowser();
 	}
 
 	@AfterMethod
 	public void afterMethod() {
 		System.out.println("Post-condition");
-		Utilities.closesAllBrowserWindows();
+		Utilities.closesAllChromeBrowserWindows();
 	}
 
 	@Test(description = "User can create new account")
@@ -35,7 +35,7 @@ public class CreateAccountTest {
 		registerPage.registerAccount(Constant.RANDOM_EMAIL, Constant.VALID_PASSWORD, Constant.VALID_PASSWORD,
 				Constant.VALID_PASSWORD);
 
-		Utilities.checkTextDisplays(registerPage.getThanksRegisteringMessage(), Constant.thanksRegisteringMessage);
+		Utilities.checkTextDisplays(registerPage.getThanksRegisteringMessage(), Constant.THANKS_REGISTERING_MESSAGE);
 	}
 
 }
