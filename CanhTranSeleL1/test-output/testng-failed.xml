@@ -9,6 +9,7 @@
           <include name="beforeMethod"/>
           <include name="afterMethod"/>
           <include name="TC03"/>
+          <include name="TC06"/>
         </methods>
       </class> <!-- Railway.LoginTest -->
     </classes>

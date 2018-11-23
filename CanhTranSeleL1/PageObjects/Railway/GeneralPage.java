@@ -64,9 +64,9 @@ public class GeneralPage {
 		return this.pageHeader().getText();
 	}
 
-	public LoginPage gotoLoginPage() {
+	public void gotoLoginPage() {
 		this.tabLogin().click();
-		return new LoginPage();
+		
 	}
 
 	public RegisterPage gotoRegisterPage() {

@@ -2,6 +2,8 @@ package Railway;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+
+import Common.ElementKeywords;
 import Constant.Constant;
 
 public class LoginPage extends GeneralPage {
@@ -12,11 +14,6 @@ public class LoginPage extends GeneralPage {
 	private final By btnLogin = By.xpath("//input[@value='login']");
 	private final By lblLoginErrorMsg = By.xpath("//p[@class='message error LoginForm']");
 	public final By lblLoginPageHeader = By.xpath("//div[@id='content']/h1");
-
-	// Elements
-	public WebElement username() {
-		return Constant.WEBDRIVER.findElement(txtUsername);
-	}
 
 	public WebElement password() {
 		return Constant.WEBDRIVER.findElement(txtPassword);
@@ -41,7 +38,7 @@ public class LoginPage extends GeneralPage {
 	}
 
 	public void login(String username, String password) {
-		this.username().sendKeys(username);
+		ElementKeywords.enter(txtUsername,username);
 		this.password().sendKeys(password);
 		this.login().click();
 	}
@@ -52,8 +49,7 @@ public class LoginPage extends GeneralPage {
 
 	public void loginFailServeralTimes(String username, String password, int time) {
 		for (int i = 0; i < time; i++) {
-			this.username().clear();
-			this.username().sendKeys(username);
+			ElementKeywords.enter(txtUsername,username);
 
 			this.password().clear();
 			this.password().sendKeys(password);

@@ -14,7 +14,8 @@ import Constant.Constant;
 public class LoginTest {
 
 	HomePage homePage = new HomePage();
-	
+	LoginPage loginPage = new LoginPage();
+
 	@BeforeMethod
 	public void beforeMethod() {
 		System.out.println("Pre-conditions");
@@ -31,9 +32,8 @@ public class LoginTest {
 	public void TC01() {
 
 		homePage.open();
-		
-		LoginPage loginPage = homePage.gotoLoginPage();
-		
+
+		homePage.gotoLoginPage();
 
 		loginPage.login(Constant.VALID_USERNAME, Constant.VALID_PASSWORD);
 
@@ -45,7 +45,7 @@ public class LoginTest {
 
 		homePage.open();
 
-		LoginPage loginPage = homePage.gotoLoginPage();
+		homePage.gotoLoginPage();
 
 		loginPage.login(Constant.BLANK_USERNAME, Constant.VALID_PASSWORD);
 
@@ -57,7 +57,7 @@ public class LoginTest {
 
 		homePage.open();
 
-		LoginPage loginPage = homePage.gotoLoginPage();
+		homePage.gotoLoginPage();
 
 		loginPage.login(Constant.VALID_USERNAME, Constant.INVALID_PASSWORD);
 
@@ -67,9 +67,7 @@ public class LoginTest {
 	@Test(description = "Login page displays when un-logged User clicks on \"Book ticket\" tab")
 	public void TC04() {
 
-		LoginPage loginPage = new LoginPage();
 		homePage.open();
-
 		homePage.gotoRegisterPage();
 		Utilities.checkPageHeader(homePage.getPageHeader(), loginPage.getLoginPageHeader());
 	}
@@ -78,8 +76,7 @@ public class LoginTest {
 	public void TC05() {
 
 		homePage.open();
-
-		LoginPage loginPage = homePage.gotoLoginPage();
+		homePage.gotoLoginPage();
 
 		loginPage.loginFailServeralTimes(Constant.VALID_USERNAME, Constant.INVALID_PASSWORD,
 				Constant.SERVERAL_TIME_LOGIN_FAIL);
@@ -88,7 +85,6 @@ public class LoginTest {
 	}
 
 	@Test(description = "Additional pages display once user logged in")
-
 	public void TC06() {
 
 		MyTicketPage myTicketPage = new MyTicketPage();
@@ -96,7 +92,7 @@ public class LoginTest {
 
 		homePage.open();
 
-		LoginPage loginPage = homePage.gotoLoginPage();
+		homePage.gotoLoginPage();
 
 		loginPage.login(Constant.VALID_USERNAME, Constant.VALID_PASSWORD);
 

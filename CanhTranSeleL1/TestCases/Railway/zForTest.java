@@ -20,6 +20,10 @@
 // Dua BeforeMothod, BeforCalsss vào BASE TEST, Page nao cung Extent BASE TEST, lam nhu vay de TC duoc gon va dep hon
 
 
+// Viet ham click, enter
+// Check page titel thi lay page header, exxpected: constant.LoginPage Header
+
+
 // CHUA LAM DUOC
 // Chuyen generalPage.gotoLoginPage ve VOID nhung ngoai TC bi loi, chua biet cach Fix
 
