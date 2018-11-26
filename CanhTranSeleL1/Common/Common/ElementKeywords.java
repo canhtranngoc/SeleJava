@@ -12,4 +12,14 @@ public class ElementKeywords {
 		element.clear();
 		element.sendKeys(value);
 	}
+
+	public static void click(By locator) {
+		WebElement element = Constant.WEBDRIVER.findElement(locator);
+		element.click();
+	}
+
+	public static String getText(By locator) {
+		WebElement element = Constant.WEBDRIVER.findElement(locator);
+		return element.getText();
+	}
 }

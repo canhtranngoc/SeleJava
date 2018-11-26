@@ -2,53 +2,53 @@
 <testng-results skipped="0" failed="3" ignored="0" total="6" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="71749" started-at="2018-11-23T05:59:55Z" finished-at="2018-11-23T06:01:06Z">
+  <suite name="Default suite" duration-ms="82892" started-at="2018-11-26T14:54:22Z" finished-at="2018-11-26T14:55:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="71749" started-at="2018-11-23T05:59:55Z" finished-at="2018-11-23T06:01:06Z">
+    <test name="Default test" duration-ms="82892" started-at="2018-11-26T14:54:22Z" finished-at="2018-11-26T14:55:45Z">
       <class name="Railway.LoginTest">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@4dfa3a9d]" name="beforeMethod" is-config="true" duration-ms="4683" started-at="2018-11-23T05:59:55Z" finished-at="2018-11-23T05:59:59Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@77caeb3e]" name="beforeMethod" is-config="true" duration-ms="4510" started-at="2018-11-26T14:54:22Z" finished-at="2018-11-26T14:54:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC01()[pri:0, instance:Railway.LoginTest@4dfa3a9d]" name="TC01" duration-ms="6220" started-at="2018-11-23T05:59:59Z" description="User can log into Railway with valid username and password" finished-at="2018-11-23T06:00:06Z">
+        <test-method status="PASS" signature="TC01()[pri:0, instance:Railway.LoginTest@77caeb3e]" name="TC01" duration-ms="9478" started-at="2018-11-26T14:54:27Z" description="User can log into Railway with valid username and password" finished-at="2018-11-26T14:54:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC01 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@4dfa3a9d]" name="afterMethod" is-config="true" duration-ms="646" started-at="2018-11-23T06:00:06Z" finished-at="2018-11-23T06:00:06Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@77caeb3e]" name="afterMethod" is-config="true" duration-ms="626" started-at="2018-11-26T14:54:36Z" finished-at="2018-11-26T14:54:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@4dfa3a9d]" name="beforeMethod" is-config="true" duration-ms="3923" started-at="2018-11-23T06:00:06Z" finished-at="2018-11-23T06:00:10Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@77caeb3e]" name="beforeMethod" is-config="true" duration-ms="3693" started-at="2018-11-26T14:54:37Z" finished-at="2018-11-26T14:54:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC02()[pri:0, instance:Railway.LoginTest@4dfa3a9d]" name="TC02" duration-ms="14462" started-at="2018-11-23T06:00:10Z" description="User can&#039;t login with blank &quot;Username&quot; textbox" finished-at="2018-11-23T06:00:25Z">
+        <test-method status="PASS" signature="TC02()[pri:0, instance:Railway.LoginTest@77caeb3e]" name="TC02" duration-ms="7496" started-at="2018-11-26T14:54:40Z" description="User can&#039;t login with blank &quot;Username&quot; textbox" finished-at="2018-11-26T14:54:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC02 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@4dfa3a9d]" name="afterMethod" is-config="true" duration-ms="584" started-at="2018-11-23T06:00:25Z" finished-at="2018-11-23T06:00:25Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@77caeb3e]" name="afterMethod" is-config="true" duration-ms="610" started-at="2018-11-26T14:54:48Z" finished-at="2018-11-26T14:54:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@4dfa3a9d]" name="beforeMethod" is-config="true" duration-ms="3943" started-at="2018-11-23T06:00:25Z" finished-at="2018-11-23T06:00:29Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@77caeb3e]" name="beforeMethod" is-config="true" duration-ms="3644" started-at="2018-11-26T14:54:49Z" finished-at="2018-11-26T14:54:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="TC03()[pri:0, instance:Railway.LoginTest@4dfa3a9d]" name="TC03" duration-ms="6220" started-at="2018-11-23T06:00:29Z" description="User cannot log into Railway with invalid password " finished-at="2018-11-23T06:00:35Z">
+        <test-method status="FAIL" signature="TC03()[pri:0, instance:Railway.LoginTest@77caeb3e]" name="TC03" duration-ms="8365" started-at="2018-11-26T14:54:52Z" description="User cannot log into Railway with invalid password " finished-at="2018-11-26T14:55:01Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The text should be: There was a problem with your login and/or errors exist in your form. expected [There was a problem with your login and/or errors exist in your form.] but found [Invalid username or password. Please try again.]]]>
+              <![CDATA[expected [There was a problem with your login and/or errors exist in your form.] but found [Invalid username or password. Please try again.]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The text should be: There was a problem with your login and/or errors exist in your form. expected [There was a problem with your login and/or errors exist in your form.] but found [Invalid username or password. Please try again.]
+              <![CDATA[java.lang.AssertionError: expected [There was a problem with your login and/or errors exist in your form.] but found [Invalid username or password. Please try again.]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
-at Common.Utilities.checkTextDisplays(Utilities.java:24)
-at Railway.LoginTest.TC03(LoginTest.java:64)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at Railway.LoginTest.TC03(LoginTest.java:52)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -80,40 +80,40 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC03 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@4dfa3a9d]" name="afterMethod" is-config="true" duration-ms="601" started-at="2018-11-23T06:00:35Z" finished-at="2018-11-23T06:00:36Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@77caeb3e]" name="afterMethod" is-config="true" duration-ms="599" started-at="2018-11-26T14:55:01Z" finished-at="2018-11-26T14:55:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@4dfa3a9d]" name="beforeMethod" is-config="true" duration-ms="3319" started-at="2018-11-23T06:00:36Z" finished-at="2018-11-23T06:00:39Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@77caeb3e]" name="beforeMethod" is-config="true" duration-ms="3649" started-at="2018-11-26T14:55:01Z" finished-at="2018-11-26T14:55:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC04()[pri:0, instance:Railway.LoginTest@4dfa3a9d]" name="TC04" duration-ms="4449" started-at="2018-11-23T06:00:39Z" description="Login page displays when un-logged User clicks on &quot;Book ticket&quot; tab" finished-at="2018-11-23T06:00:44Z">
+        <test-method status="PASS" signature="TC04()[pri:0, instance:Railway.LoginTest@77caeb3e]" name="TC04" duration-ms="6787" started-at="2018-11-26T14:55:05Z" description="Login page displays when un-logged User clicks on &quot;Book ticket&quot; tab" finished-at="2018-11-26T14:55:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC04 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@4dfa3a9d]" name="afterMethod" is-config="true" duration-ms="605" started-at="2018-11-23T06:00:44Z" finished-at="2018-11-23T06:00:44Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@77caeb3e]" name="afterMethod" is-config="true" duration-ms="584" started-at="2018-11-26T14:55:12Z" finished-at="2018-11-26T14:55:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@4dfa3a9d]" name="beforeMethod" is-config="true" duration-ms="3345" started-at="2018-11-23T06:00:44Z" finished-at="2018-11-23T06:00:48Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@77caeb3e]" name="beforeMethod" is-config="true" duration-ms="3671" started-at="2018-11-26T14:55:12Z" finished-at="2018-11-26T14:55:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="TC05()[pri:0, instance:Railway.LoginTest@4dfa3a9d]" name="TC05" duration-ms="8109" started-at="2018-11-23T06:00:48Z" description="System shows message when user enters wrong password several times" finished-at="2018-11-23T06:00:56Z">
+        <test-method status="FAIL" signature="TC05()[pri:0, instance:Railway.LoginTest@77caeb3e]" name="TC05" duration-ms="11479" started-at="2018-11-26T14:55:16Z" description="System shows message when user enters wrong password several times" finished-at="2018-11-26T14:55:27Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The text should be: You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes. expected [You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.] but found [Invalid username or password. Please try again.]]]>
+              <![CDATA[expected [You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.] but found [Invalid username or password. Please try again.]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The text should be: You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes. expected [You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.] but found [Invalid username or password. Please try again.]
+              <![CDATA[java.lang.AssertionError: expected [You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.] but found [Invalid username or password. Please try again.]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
-at Common.Utilities.checkTextDisplays(Utilities.java:24)
-at Railway.LoginTest.TC05(LoginTest.java:87)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at Railway.LoginTest.TC05(LoginTest.java:69)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -145,40 +145,40 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC05 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@4dfa3a9d]" name="afterMethod" is-config="true" duration-ms="654" started-at="2018-11-23T06:00:56Z" finished-at="2018-11-23T06:00:56Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@77caeb3e]" name="afterMethod" is-config="true" duration-ms="690" started-at="2018-11-26T14:55:27Z" finished-at="2018-11-26T14:55:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@4dfa3a9d]" name="beforeMethod" is-config="true" duration-ms="3324" started-at="2018-11-23T06:00:56Z" finished-at="2018-11-23T06:01:00Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@77caeb3e]" name="beforeMethod" is-config="true" duration-ms="3642" started-at="2018-11-26T14:55:28Z" finished-at="2018-11-26T14:55:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="TC06()[pri:0, instance:Railway.LoginTest@4dfa3a9d]" name="TC06" duration-ms="6013" started-at="2018-11-23T06:01:00Z" description="Additional pages display once user logged in" finished-at="2018-11-23T06:01:06Z">
+        <test-method status="FAIL" signature="TC06()[pri:0, instance:Railway.LoginTest@77caeb3e]" name="TC06" duration-ms="12742" started-at="2018-11-26T14:55:32Z" description="Additional pages display once user logged in" finished-at="2018-11-26T14:55:44Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//span[.='Logout']"}
-  (Session info: chrome=70.0.3538.110)
+  (Session info: chrome=70.0.3538.102)
   (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LGDN15032-W7', ip: '192.168.191.108', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_181'
+System info: host: 'MANAGER-PC', ip: '192.168.1.4', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_191'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\CANH~1.TRA\AppData...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52645}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 70.0.3538.110, webStorageEnabled: true}
-Session ID: 8f1e7a50021ee9df9625d6009f0230a9
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\Manager\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50544}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 70.0.3538.102, webStorageEnabled: true}
+Session ID: ffa65d3d419a4b465e384058c8060539
 *** Element info: {Using=xpath, value=//span[.='Logout']}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[.='Logout']"}
-  (Session info: chrome=70.0.3538.110)
+  (Session info: chrome=70.0.3538.102)
   (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LGDN15032-W7', ip: '192.168.191.108', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_181'
+System info: host: 'MANAGER-PC', ip: '192.168.1.4', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_191'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\CANH~1.TRA\AppData...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52645}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 70.0.3538.110, webStorageEnabled: true}
-Session ID: 8f1e7a50021ee9df9625d6009f0230a9
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\Manager\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50544}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 70.0.3538.102, webStorageEnabled: true}
+Session ID: ffa65d3d419a4b465e384058c8060539
 *** Element info: {Using=xpath, value=//span[.='Logout']}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -196,8 +196,8 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at Railway.GeneralPage.isTabdisplay(GeneralPage.java:89)
-at Railway.LoginTest.TC06(LoginTest.java:105)
+at Railway.GeneralPage.isTabdisplay(GeneralPage.java:94)
+at Railway.LoginTest.TC06(LoginTest.java:79)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -229,7 +229,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC06 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@4dfa3a9d]" name="afterMethod" is-config="true" duration-ms="607" started-at="2018-11-23T06:01:06Z" finished-at="2018-11-23T06:01:06Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@77caeb3e]" name="afterMethod" is-config="true" duration-ms="575" started-at="2018-11-26T14:55:44Z" finished-at="2018-11-26T14:55:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->

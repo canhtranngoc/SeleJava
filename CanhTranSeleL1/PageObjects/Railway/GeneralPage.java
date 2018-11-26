@@ -4,6 +4,8 @@ import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import Common.ElementKeywords;
+import Common.ElementHelper;
 
 import Constant.Constant;
 
@@ -13,81 +15,45 @@ public class GeneralPage {
 	private final By tabRegister = By.xpath("//div[@id='menu']//span[.='Register']");
 	private final By tabChangePassword = By.xpath("//div[@id='menu']//span[.='Change password']");
 	private final By tabMyTicket = By.xpath("//div[@id='menu']//span[.='My ticket']");
-
 	private final By tabBookTicket = By.xpath("//a[@href='/Page/BookTicketPage.cshtml']");
 	private final By tabLogout = By.xpath("//a[@href='/Account/Logout']");
-
 	private final By welcomeMessage = By.xpath("//div[@class='account']");
-
 	private final By pageHeader = By.xpath("//div[@id='content']/h1");
-
-	// Elements
-	protected WebElement tabLogin() {
-		return Constant.WEBDRIVER.findElement(tabLogin);
-	}
-
-	protected WebElement tabRegister() {
-		return Constant.WEBDRIVER.findElement(tabRegister);
-	}
-
-	protected WebElement tabChangePassword() {
-		return Constant.WEBDRIVER.findElement(tabChangePassword);
-	}
-
-	protected WebElement tabMyTicket() {
-		return Constant.WEBDRIVER.findElement(tabMyTicket);
-	}
-
-	protected WebElement tabLogout() {
-		return Constant.WEBDRIVER.findElement(tabLogout);
-	}
-
-	protected WebElement tabBookTicket() {
-		return Constant.WEBDRIVER.findElement(tabBookTicket);
-	}
-
-	protected WebElement welcomeMessage() {
-		return Constant.WEBDRIVER.findElement(welcomeMessage);
-	}
-
-	protected WebElement pageHeader() {
-		return Constant.WEBDRIVER.findElement(pageHeader);
-	}
 
 	// Methods
 
 	public String getWelcomeMessage() {
-		return this.welcomeMessage().getText();
+		return ElementKeywords.getText(welcomeMessage);
 	}
 
 	public String getPageHeader() {
-		return this.pageHeader().getText();
+		return ElementKeywords.getText(pageHeader);
 	}
 
 	public void gotoLoginPage() {
-		this.tabLogin().click();
-		
+		ElementKeywords.click(tabLogin);
 	}
 
-	public RegisterPage gotoRegisterPage() {
-		this.tabRegister().click();
-		return new RegisterPage();
+	public void gotoRegisterPage() {
+		ElementKeywords.click(tabRegister);
 	}
 
 	public void gotoMyTicKetPage() {
-		this.tabMyTicket().click();
+		ElementKeywords.click(tabMyTicket);
 	}
 
 	public void gotoChangePasswordPage() {
-		this.tabChangePassword().click();
+		ElementKeywords.click(tabChangePassword);
 	}
 
-	public boolean isTabdisplay(String tabName) {
-		try {
+	public void gotoBookTicketPage() {
+		ElementKeywords.click(tabBookTicket);
+	}
 
+	public boolean isTabDisplayed(String tabName) {
+		try {
 			String str = String.format("//span[.='%s']", tabName);
-			Constant.WEBDRIVER.findElement(By.xpath(str));
-			return true;
+			return Constant.WEBDRIVER.findElement(By.xpath(str)).isDisplayed();
 		} catch (NoSuchElementException e) {
 			return false;
 		}
@@ -96,7 +62,7 @@ public class GeneralPage {
 	public void logOut() {
 		// If tab logout displays, then
 		{
-			this.tabLogout().click();
+			//this.tabLogout().click();
 		}
 	}
 

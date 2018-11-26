@@ -7,13 +7,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import Common.Utilities;
 import Constant.Constant;
 
 public class CreateAccountTest {
 
 	HomePage homePage = new HomePage();
+	RegisterPage registerPage=new RegisterPage();
 
 	@BeforeMethod
 	public void beforeMethod() {
@@ -31,11 +31,17 @@ public class CreateAccountTest {
 	public void TC07() {
 
 		homePage.open();
-		RegisterPage registerPage = homePage.gotoRegisterPage();
+		homePage.gotoRegisterPage();
 		registerPage.registerAccount(Constant.RANDOM_EMAIL, Constant.VALID_PASSWORD, Constant.VALID_PASSWORD,
-				Constant.VALID_PASSWORD);
-
-		Utilities.checkTextDisplays(registerPage.getThanksRegisteringMessage(), Constant.THANKS_REGISTERING_MESSAGE);
+				Constant.VALIDPID);
+		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), Constant.REGISTER_SUCCESS_MESSAGE);
 	}
 
+	@Test (description = "User can't create account with \"Confirm password\" is not the same with \"Password\"")
+	public void TC10() {
+		homePage.open();
+		homePage.gotoRegisterPage();
+		registerPage.registerAccount(Constant.RANDOM_EMAIL, Constant.VALID_PASSWORD, Constant.INVALID_PASSWORD, Constant.VALIDPID);
+		Assert.assertEquals(registerPage.getRegisterErrorMessage(), Constant.REGISTER_ERROR_MESSAGE);
+	}
 }

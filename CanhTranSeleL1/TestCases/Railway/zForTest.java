@@ -11,7 +11,7 @@
 
 // Dung Enum va viet Ham goToPage() Enum giong voi Dataset trong TA, xo ra dropdown de nguoi dung chon
 
-// Chuyen Classs có return ve void, khong can tra ve, khi nao can thi new ra dung
+
 
 // Trong TC khong nen co .getText(), may cai nay nen dua vao ham getAbcXyz trong Page
 
@@ -20,12 +20,11 @@
 // Dua BeforeMothod, BeforCalsss vào BASE TEST, Page nao cung Extent BASE TEST, lam nhu vay de TC duoc gon va dep hon
 
 
-// Viet ham click, enter
+
 // Check page titel thi lay page header, exxpected: constant.LoginPage Header
 
 
-// CHUA LAM DUOC
-// Chuyen generalPage.gotoLoginPage ve VOID nhung ngoai TC bi loi, chua biet cach Fix
+
 
 
 
@@ -70,7 +69,7 @@ public class zForTest {
 		//loginPage.login(Constant.VALID_USERNAME, Constant.VALID_PASSWORD);
 		
 		
-		homePage.isTabdisplay("Homes");
+		homePage.isTabDisplayed("Homes");
 		
 		
 		
