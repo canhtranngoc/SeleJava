@@ -34,7 +34,7 @@ public class LoginTest {
 		homePage.open();
 		homePage.gotoLoginPage();
 		loginPage.login(Constant.VALID_USERNAME, Constant.VALID_PASSWORD);
-		Assert.assertEquals(loginPage.getWelcomeMessage(), Constant.WELLCOME_MESSAGE);
+		Assert.assertEquals(loginPage.getWelcomeMessage(), Constant.Message.WELLCOME_MESSAGE);
 	}
 
 	@Test(description = "User can't login with blank \"Username\" textbox")
@@ -42,15 +42,15 @@ public class LoginTest {
 		homePage.open();
 		homePage.gotoLoginPage();
 		loginPage.login(Constant.BLANK_USERNAME, Constant.VALID_PASSWORD);
-		Assert.assertEquals(loginPage.getErrorLoginMessage(), Constant.ERROR_LOGIN_MESSAGE_BLANK_USERNAME);
-	}
+		Assert.assertEquals(loginPage.getErrorLoginMessage(), Constant.Message.LOGIN_BLANK_USERNAME_ERROR_MESSAGE);
+			}
 
 	@Test(description = "User cannot log into Railway with invalid password ")
 	public void TC03() {
 		homePage.open();
 		homePage.gotoLoginPage();
 		loginPage.login(Constant.VALID_USERNAME, Constant.INVALID_PASSWORD);
-		Assert.assertEquals(loginPage.getErrorLoginMessage(), Constant.ERROR_LOGIN_MESSAGE_INVALID_PASSWORD);
+		Assert.assertEquals(loginPage.getErrorLoginMessage(), Constant.Message.LOGIN_INVALID_PASSWORD_ERROR_MESSAGE);
 	}
 
 	@Test(description = "Login page displays when un-logged User clicks on \"Book ticket\" tab")
@@ -67,7 +67,7 @@ public class LoginTest {
 		homePage.gotoLoginPage();
 		loginPage.loginFailServeralTimes(Constant.VALID_USERNAME, Constant.INVALID_PASSWORD,
 				Constant.SERVERAL_TIME_LOGIN_FAIL);
-		Assert.assertEquals(loginPage.getErrorLoginMessage(), Constant.ERROR_LOGIN_MESSAGE_FOR_SERVERAL_TIMES);
+		Assert.assertEquals(loginPage.getErrorLoginMessage(), Constant.Message.LOGIN_FOR_SERVERAL_TIMES_ERROR_MESSAGE);
 	}
 
 	@Test(description = "Additional pages display once user logged in")
@@ -90,11 +90,11 @@ public class LoginTest {
 	public void TC08() {
 		homePage.open();
 		homePage.gotoRegisterPage();
-		registerPage.registerAccount(Constant.RANDOM_EMAIL, Constant.VALID_PASSWORD, Constant.VALID_PASSWORD, Constant.VALIDPID);
+		registerPage.registerAccount(Constant.RANDOM_EMAIL, Constant.VALID_PASSWORD, Constant.VALID_PASSWORD, Constant.VALID_PID);
 		
 		homePage.gotoLoginPage();
 		loginPage.login(Constant.RANDOM_EMAIL, Constant.VALID_PASSWORD);
-		Assert.assertEquals(loginPage.getErrorLoginMessage(), Constant.INACTIVE_ACCOUNT_LOGIN_ERROR_MESSAGE);
+		Assert.assertEquals(loginPage.getErrorLoginMessage(), Constant.Message.INACTIVE_ACCOUNT_LOGIN_ERROR_MESSAGE);
 		
 	}
 	

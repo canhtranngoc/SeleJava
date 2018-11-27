@@ -36,6 +36,6 @@ public class ChangePasswordTest {
 
 		homePage.gotoChangePasswordPage();
 		changePasswordPage.changePassword(Constant.VALID_PASSWORD, Constant.NEW_PASSWORD, Constant.NEW_PASSWORD);
-		Assert.assertEquals(changePasswordPage.getSuccessMessage(), Constant.CHANGE_PASSWORD_SUCCESS_MESSAGE);
+		Assert.assertEquals(changePasswordPage.getSuccessMessage(), Constant.Message.CHANGE_PASSWORD_SUCCESS_MESSAGE);
 	}
 }

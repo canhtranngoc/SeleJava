@@ -58,6 +58,11 @@ public class GeneralPage {
 			return false;
 		}
 	}
+	
+	
+	public void goToPage() {
+		
+	}
 
 	public void logOut() {
 		// If tab logout displays, then

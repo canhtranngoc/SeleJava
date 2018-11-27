@@ -64,9 +64,10 @@ public class zForTest {
 		HomePage homePage = new HomePage();
 		homePage.open();
 
-		//LoginPage loginPage = homePage.gotoLoginPage();
+		
+		LoginPage loginPage = homePage.gotoLoginPage();
 
-		//loginPage.login(Constant.VALID_USERNAME, Constant.VALID_PASSWORD);
+		loginPage.login(Constant.PAGE_NAME.HOME, Constant.VALID_PASSWORD);
 		
 		
 		homePage.isTabDisplayed("Homes");
