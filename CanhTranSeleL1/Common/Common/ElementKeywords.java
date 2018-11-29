@@ -2,6 +2,7 @@ package Common;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import Constant.Constant;
 
@@ -21,5 +22,10 @@ public class ElementKeywords {
 	public static String getText(By locator) {
 		WebElement element = Constant.WEBDRIVER.findElement(locator);
 		return element.getText();
+	}
+	
+	public static void select(By locator, String option) {
+		Select select = new Select(Constant.WEBDRIVER.findElement(locator));
+		select.selectByVisibleText(option);
 	}
 }

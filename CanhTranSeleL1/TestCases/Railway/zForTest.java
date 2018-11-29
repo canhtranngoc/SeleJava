@@ -42,6 +42,11 @@ import Common.Utilities;
 import Constant.Constant;
 
 public class zForTest {
+
+	HomePage homePage = new HomePage();
+	LoginPage loginPage = new LoginPage();
+	RegisterPage registerPage=new RegisterPage();
+
 	@BeforeMethod
 	public void beforeMethod() {
 		System.out.println("Pre-conditions");
@@ -58,23 +63,15 @@ public class zForTest {
 
 	
 
-	@Test(description = "Additional pages display once user logged in")
-
-	public void TC06() {
-		HomePage homePage = new HomePage();
+	@Test(description = "User can log into Railway with valid username and password")
+	public void TC01() {
 		homePage.open();
+		homePage.gotoLoginPage();
+		loginPage.login(Constant.VALID_USERNAME, Constant.VALID_PASSWORD);
+		//homePage.goToPage(pageName);
+
 
 		
-		LoginPage loginPage = homePage.gotoLoginPage();
-
-		loginPage.login(Constant.PAGE_NAME.HOME, Constant.VALID_PASSWORD);
-		
-		
-		homePage.isTabDisplayed("Homes");
-		
-		
-		
-
 	}
 
 }

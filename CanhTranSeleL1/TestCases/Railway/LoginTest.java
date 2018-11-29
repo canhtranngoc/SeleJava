@@ -7,6 +7,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import Constant.Constant.TAB_NAME;
 
 import Common.Utilities;
 import Constant.Constant;
@@ -33,6 +34,7 @@ public class LoginTest {
 	public void TC01() {
 		homePage.open();
 		homePage.gotoLoginPage();
+		//homePage.goToPage(TAB_NAME.LOGIN);
 		loginPage.login(Constant.VALID_USERNAME, Constant.VALID_PASSWORD);
 		Assert.assertEquals(loginPage.getWelcomeMessage(), Constant.Message.WELLCOME_MESSAGE);
 	}
@@ -41,6 +43,7 @@ public class LoginTest {
 	public void TC02() {
 		homePage.open();
 		homePage.gotoLoginPage();
+		//homePage.goToPage(TAB_NAME.LOGIN);
 		loginPage.login(Constant.BLANK_USERNAME, Constant.VALID_PASSWORD);
 		Assert.assertEquals(loginPage.getErrorLoginMessage(), Constant.Message.LOGIN_BLANK_USERNAME_ERROR_MESSAGE);
 			}
@@ -49,6 +52,7 @@ public class LoginTest {
 	public void TC03() {
 		homePage.open();
 		homePage.gotoLoginPage();
+		//homePage.goToPage(TAB_NAME.LOGIN);
 		loginPage.login(Constant.VALID_USERNAME, Constant.INVALID_PASSWORD);
 		Assert.assertEquals(loginPage.getErrorLoginMessage(), Constant.Message.LOGIN_INVALID_PASSWORD_ERROR_MESSAGE);
 	}
@@ -65,6 +69,7 @@ public class LoginTest {
 	public void TC05() {
 		homePage.open();
 		homePage.gotoLoginPage();
+		//homePage.goToPage(TAB_NAME.LOGIN);
 		loginPage.loginFailServeralTimes(Constant.VALID_USERNAME, Constant.INVALID_PASSWORD,
 				Constant.SERVERAL_TIME_LOGIN_FAIL);
 		Assert.assertEquals(loginPage.getErrorLoginMessage(), Constant.Message.LOGIN_FOR_SERVERAL_TIMES_ERROR_MESSAGE);
@@ -74,6 +79,7 @@ public class LoginTest {
 	public void TC06() {
 		homePage.open();
 		homePage.gotoLoginPage();
+		//homePage.goToPage(TAB_NAME.LOGIN);
 		loginPage.login(Constant.VALID_USERNAME, Constant.VALID_PASSWORD);
 		homePage.isTabDisplayed("My ticket");
 		homePage.isTabDisplayed("Change password");

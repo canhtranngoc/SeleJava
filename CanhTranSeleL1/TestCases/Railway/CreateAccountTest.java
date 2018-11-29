@@ -21,11 +21,11 @@ public class CreateAccountTest {
 		Utilities.openChromeBrowser();
 	}
 
-	//@AfterMethod
-	//public void afterMethod() {
-	//	System.out.println("Post-condition");
-	//	Utilities.closesAllChromeBrowserWindows();
-	//}
+	@AfterMethod
+	public void afterMethod() {
+		System.out.println("Post-condition");
+		Utilities.closesAllChromeBrowserWindows();
+	}
 
 	@Test(description = "User can create new account")
 	public void TC07() {
@@ -44,4 +44,16 @@ public class CreateAccountTest {
 		registerPage.registerAccount(Constant.RANDOM_EMAIL, Constant.VALID_PASSWORD, Constant.INVALID_PASSWORD, Constant.VALID_PID);
 		Assert.assertEquals(registerPage.getRegisterErrorMessage(), Constant.Message.REGISTER_ERROR_MESSAGE);
 	}
+	
+	@Test (description = "User can't create account while password and PID fields are empty")
+	public void TC11() {
+		homePage.open();
+		homePage.gotoRegisterPage();
+		registerPage.registerAccount(Constant.RANDOM_EMAIL, "", "", "");
+		Assert.assertEquals(registerPage.getRegisterErrorMessage(), Constant.Message.REGISTER_ERROR_MESSAGE);
+		Assert.assertEquals(registerPage.getInvalidPasswordError(),Constant.Message.INVALID_PASSWORD_MESSAGE);
+		Assert.assertEquals(registerPage.getIDError(),Constant.Message.INVALID_ID_MESSAGE);
+	}
+	
+	
 }

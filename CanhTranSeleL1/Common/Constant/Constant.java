@@ -20,7 +20,6 @@ public class Constant {
 	public static final String NEW_PASSWORD = "12345678";
 	public static final String RANDOM_EMAIL = "canh+"+ Utilities.randomString()+"@logigear.com";	
 	public static final String VALID_PID = "123456789";
-
 	public static final int SERVERAL_TIME_LOGIN_FAIL = 4;
 
 	public class Message {
@@ -31,7 +30,9 @@ public class Constant {
 		public static final String INACTIVE_ACCOUNT_LOGIN_ERROR_MESSAGE = "Invalid username or password. Please try again.";
 		public static final String REGISTER_ERROR_MESSAGE = "There're errors in the form. Please correct the errors and try again.";
 		public static final String REGISTER_SUCCESS_MESSAGE = "Thank you for registering your account";
-		public static final String CHANGE_PASSWORD_SUCCESS_MESSAGE = "Your password has been updated";		
+		public static final String CHANGE_PASSWORD_SUCCESS_MESSAGE = "Your password has been updated";	
+		public static final String INVALID_PASSWORD_MESSAGE="Invalid password length.";
+		public static final String INVALID_ID_MESSAGE="Invalid ID length.";
 	}
 	
 	public class PageHeader {
@@ -46,7 +47,7 @@ public class Constant {
 		public static final String LOGIN_PAGE = "Login page";
 	}
 
-	public static enum PAGE_NAME {
+	public static enum TAB_NAME {
 		HOME("Home"), 
 		FAQ("FAQ"),
 		CONTACT("Contact"),
@@ -59,14 +60,72 @@ public class Constant {
 		MYTICKET("My ticket"), 
 		CHANGE_PASSWORD("Change password");
 		
-		private final String value;
+		private String tabName;
 
-		private PAGE_NAME(String value) {
-			this.value = value;
+		private TAB_NAME(String tabName) {
+			this.tabName = tabName;
 		}
 
 		public String getValue() {
-			return value;
+			return tabName;
 		}
 	}
+	
+	public static enum DEPART_STATION {
+		SAI_GON("Sài Gòn"), 
+		PHAN_THIET("Phan Thiết"),
+		NHA_TRANG("Nha Trang"),
+		DA_NANG("Đà Nẵng"),
+		HUE("Huế"),
+		QUANG_NGAI("Quảng Ngãi");
+		
+		private String departStation;
+
+		private DEPART_STATION(String departStation) {
+			this.departStation = departStation;
+		}
+
+		public String getValue() {
+			return this.departStation;
+		}
+	}
+	
+	public static enum ARRIVE_STATION {
+		SAI_GON("Sài Gòn"), 
+		PHAN_THIET("Phan Thiết"),
+		NHA_TRANG("Nha Trang"),
+		DA_NANG("Đà Nẵng"),
+		HUE("Huế"),
+		QUANG_NGAI("Quảng Ngãi");
+		
+		private String arriveStation;
+
+		private ARRIVE_STATION(String arriveStation) {
+			this.arriveStation = arriveStation;
+		}
+
+		public String getValue() {
+			return this.arriveStation;
+		}
+	}
+	
+	public static enum SEAT_TYPE {
+		HARD_SEAT("Hard seat"), 
+		SORT_SEAT("Soft seat"),
+		SORT_SEAT_WITH_AIR_CONDITINER("Soft seat with air conditioner"),
+		HARD_BED("Hard bed"),
+		SORT_BED("Soft bed"),
+		SORT_BED_WITH_AIR_CONDITINER("Soft bed with air conditioner");
+		
+		private String seatType;
+
+		private SEAT_TYPE(String seatType) {
+			this.seatType = seatType;
+		}
+
+		public String getValue() {
+			return this.seatType;
+		}
+	}
+	
 }

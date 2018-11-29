@@ -8,6 +8,7 @@ import Common.ElementKeywords;
 import Common.ElementHelper;
 
 import Constant.Constant;
+import Constant.Constant.TAB_NAME;
 
 public class GeneralPage {
 	// Locators
@@ -58,16 +59,17 @@ public class GeneralPage {
 			return false;
 		}
 	}
-	
-	
-	public void goToPage() {
-		
+
+	public void gotoPage(TAB_NAME tabName) {
+		String str = String.format("//span[.='%s']", tabName.getValue());
+		Constant.WEBDRIVER.findElement(By.xpath(str)).click();
+
 	}
 
 	public void logOut() {
 		// If tab logout displays, then
 		{
-			//this.tabLogout().click();
+			// this.tabLogout().click();
 		}
 	}
 
