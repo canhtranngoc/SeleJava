@@ -38,7 +38,13 @@ public class BookTickets {
 		homePage.gotoPage(TAB_NAME.LOGIN);
 		loginPage.login(Constant.VALID_USERNAME, Constant.VALID_PASSWORD);
 		homePage.gotoPage(TAB_NAME.BOOK_TICKET);
-		bookTicketPage.BookTickets("12/13/2018", DEPART_STATION.DA_NANG.getValue(), ARRIVE_STATION.NHA_TRANG.getValue(), SEAT_TYPE.HARD_BED.getValue(), "4");
-
+		bookTicketPage.BookTickets("12/13/2018", DEPART_STATION.DA_NANG.getValue(), ARRIVE_STATION.NHA_TRANG.getValue(),
+				SEAT_TYPE.HARD_BED.getValue(), "4");
+		// Move Date to Constant
+		// Move Amount to Constant
+		// Delete Ticket after booking
+		// LogOut
+		
+		
 	}
 }

@@ -16,7 +16,7 @@ public class LoginTest {
 
 	HomePage homePage = new HomePage();
 	LoginPage loginPage = new LoginPage();
-	RegisterPage registerPage=new RegisterPage();
+	RegisterPage registerPage = new RegisterPage();
 
 	@BeforeMethod
 	public void beforeMethod() {
@@ -33,8 +33,7 @@ public class LoginTest {
 	@Test(description = "User can log into Railway with valid username and password")
 	public void TC01() {
 		homePage.open();
-		homePage.gotoLoginPage();
-		//homePage.goToPage(TAB_NAME.LOGIN);
+		homePage.gotoPage(TAB_NAME.LOGIN);
 		loginPage.login(Constant.VALID_USERNAME, Constant.VALID_PASSWORD);
 		Assert.assertEquals(loginPage.getWelcomeMessage(), Constant.Message.WELLCOME_MESSAGE);
 	}
@@ -42,17 +41,16 @@ public class LoginTest {
 	@Test(description = "User can't login with blank \"Username\" textbox")
 	public void TC02() {
 		homePage.open();
-		homePage.gotoLoginPage();
-		//homePage.goToPage(TAB_NAME.LOGIN);
+		homePage.gotoPage(TAB_NAME.LOGIN);
 		loginPage.login(Constant.BLANK_USERNAME, Constant.VALID_PASSWORD);
 		Assert.assertEquals(loginPage.getErrorLoginMessage(), Constant.Message.LOGIN_BLANK_USERNAME_ERROR_MESSAGE);
-			}
+	}
 
 	@Test(description = "User cannot log into Railway with invalid password ")
 	public void TC03() {
 		homePage.open();
-		homePage.gotoLoginPage();
-		//homePage.goToPage(TAB_NAME.LOGIN);
+
+		homePage.gotoPage(TAB_NAME.LOGIN);
 		loginPage.login(Constant.VALID_USERNAME, Constant.INVALID_PASSWORD);
 		Assert.assertEquals(loginPage.getErrorLoginMessage(), Constant.Message.LOGIN_INVALID_PASSWORD_ERROR_MESSAGE);
 	}
@@ -61,15 +59,14 @@ public class LoginTest {
 	public void TC04() {
 
 		homePage.open();
-		homePage.gotoBookTicketPage();
+		homePage.gotoPage(TAB_NAME.BOOK_TICKET);
 		Assert.assertEquals(homePage.getPageHeader(), Constant.PageHeader.LOGIN_PAGE);
 	}
 
 	@Test(description = "System shows message when user enters wrong password several times")
 	public void TC05() {
 		homePage.open();
-		homePage.gotoLoginPage();
-		//homePage.goToPage(TAB_NAME.LOGIN);
+		homePage.gotoPage(TAB_NAME.LOGIN);
 		loginPage.loginFailServeralTimes(Constant.VALID_USERNAME, Constant.INVALID_PASSWORD,
 				Constant.SERVERAL_TIME_LOGIN_FAIL);
 		Assert.assertEquals(loginPage.getErrorLoginMessage(), Constant.Message.LOGIN_FOR_SERVERAL_TIMES_ERROR_MESSAGE);
@@ -78,30 +75,30 @@ public class LoginTest {
 	@Test(description = "Additional pages display once user logged in")
 	public void TC06() {
 		homePage.open();
-		homePage.gotoLoginPage();
-		//homePage.goToPage(TAB_NAME.LOGIN);
+		homePage.gotoPage(TAB_NAME.LOGIN);
 		loginPage.login(Constant.VALID_USERNAME, Constant.VALID_PASSWORD);
 		homePage.isTabDisplayed("My ticket");
 		homePage.isTabDisplayed("Change password");
 		homePage.isTabDisplayed("Logout");
-		
-		homePage.gotoMyTicKetPage();
+
+		homePage.gotoPage(TAB_NAME.MYTICKET);
 		Assert.assertEquals(homePage.getPageHeader(), Constant.PageHeader.MY_TICKET_PAGE);
 
-		homePage.gotoChangePasswordPage();
+		homePage.gotoPage(TAB_NAME.CHANGE_PASSWORD);
 		Assert.assertEquals(homePage.getPageHeader(), Constant.PageHeader.CHANGE_PASSWORD_PAGE);
 	}
 
 	@Test(description = "User can't login with an account hasn't been activated")
 	public void TC08() {
 		homePage.open();
-		homePage.gotoRegisterPage();
-		registerPage.registerAccount(Constant.RANDOM_EMAIL, Constant.VALID_PASSWORD, Constant.VALID_PASSWORD, Constant.VALID_PID);
-		
-		homePage.gotoLoginPage();
+		homePage.gotoPage(TAB_NAME.REGISTER);
+		registerPage.registerAccount(Constant.RANDOM_EMAIL, Constant.VALID_PASSWORD, Constant.VALID_PASSWORD,
+				Constant.VALID_PID);
+
+		homePage.gotoPage(TAB_NAME.LOGIN);
 		loginPage.login(Constant.RANDOM_EMAIL, Constant.VALID_PASSWORD);
 		Assert.assertEquals(loginPage.getErrorLoginMessage(), Constant.Message.INACTIVE_ACCOUNT_LOGIN_ERROR_MESSAGE);
-		
+
 	}
-	
+
 }

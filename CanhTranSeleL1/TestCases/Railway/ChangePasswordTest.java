@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import Common.Utilities;
 import Constant.Constant;
+import Constant.Constant.TAB_NAME;
 
 public class ChangePasswordTest {
 	HomePage homePage = new HomePage();
@@ -31,10 +32,10 @@ public class ChangePasswordTest {
 	public void TC09() {
 
 		homePage.open();
-		homePage.gotoLoginPage();
+		homePage.gotoPage(TAB_NAME.LOGIN);
 		loginPage.login(Constant.VALID_USERNAME, Constant.VALID_PASSWORD);
-
-		homePage.gotoChangePasswordPage();
+		
+		homePage.gotoPage(TAB_NAME.CHANGE_PASSWORD);
 		changePasswordPage.changePassword(Constant.VALID_PASSWORD, Constant.NEW_PASSWORD, Constant.NEW_PASSWORD);
 		Assert.assertEquals(changePasswordPage.getSuccessMessage(), Constant.Message.CHANGE_PASSWORD_SUCCESS_MESSAGE);
 	}
