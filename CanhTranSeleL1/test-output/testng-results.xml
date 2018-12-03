@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="1" ignored="6" total="7" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10767" started-at="2018-11-29T15:58:49Z" finished-at="2018-11-29T15:59:00Z">
+  <suite name="Default suite" duration-ms="38612" started-at="2018-12-03T15:35:36Z" finished-at="2018-12-03T15:36:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10767" started-at="2018-11-29T15:58:49Z" finished-at="2018-11-29T15:59:00Z">
-      <class name="Railway.BookTickets">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.BookTickets@66a3ffec]" name="beforeMethod" is-config="true" duration-ms="10725" started-at="2018-11-29T15:58:49Z" finished-at="2018-11-29T15:59:00Z">
+    <test name="Default test" duration-ms="38612" started-at="2018-12-03T15:35:36Z" finished-at="2018-12-03T15:36:14Z">
+      <class name="Railway.LoginTest">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@5e3a8624]" name="beforeMethod" is-config="true" duration-ms="4329" started-at="2018-12-03T15:35:36Z" finished-at="2018-12-03T15:35:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="TC01()[pri:0, instance:Railway.BookTickets@66a3ffec]" name="TC01" duration-ms="6" started-at="2018-11-29T15:59:00Z" description="User can log into Railway with valid username and password" finished-at="2018-11-29T15:59:00Z">
-          <exception class="java.lang.Error">
+        <test-method status="FAIL" signature="TC05()[pri:0, instance:Railway.LoginTest@5e3a8624]" name="TC05" duration-ms="33676" started-at="2018-12-03T15:35:40Z" description="System shows message when user enters wrong password several times" finished-at="2018-12-03T15:36:14Z">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Unresolved compilation problem: 
-The method BookTickets(String, String, String, String, String) in the type BookTicketPage is not applicable for the arguments (String, String, String, String, int)
-]]>
+              <![CDATA[expected [You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.] but found [Invalid username or password. Please try again.]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problem: 
-The method BookTickets(String, String, String, String, String) in the type BookTicketPage is not applicable for the arguments (String, String, String, String, int)
-
-at Railway.BookTickets.TC01(BookTickets.java:41)
+              <![CDATA[java.lang.AssertionError: expected [You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.] but found [Invalid username or password. Please try again.]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at Railway.LoginTest.TC05(LoginTest.java:67)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -50,11 +52,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC01 -->
-      </class> <!-- Railway.BookTickets -->
+        </test-method> <!-- TC05 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@5e3a8624]" name="afterMethod" is-config="true" duration-ms="572" started-at="2018-12-03T15:36:14Z" finished-at="2018-12-03T15:36:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- Railway.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,11 +1,6 @@
-package Railway;
-
+package PageObjects.Railway;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import Common.ElementKeywords;
-
-import Common.ElementKeywords;
-import Constant.Constant;
+import Common.Common.ElementKeywords;
 
 public class ChangePasswordPage extends GeneralPage {
 

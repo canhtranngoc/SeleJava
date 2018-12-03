@@ -1,15 +1,14 @@
 package Railway;
-
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
+import static org.testng.Assert.assertEquals;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import Common.Utilities;
-import Constant.Constant;
-import Constant.Constant.TAB_NAME;
+import Common.Common.Utilities;
+import Common.Constant.Constant;
+import Common.Constant.Constant.TabName;
+import PageObjects.Railway.ChangePasswordPage;
+import PageObjects.Railway.HomePage;
+import PageObjects.Railway.LoginPage;
 
 public class ChangePasswordTest {
 	HomePage homePage = new HomePage();
@@ -19,24 +18,22 @@ public class ChangePasswordTest {
 	@BeforeMethod
 	public void beforeMethod() {
 		System.out.println("Pre-conditions");
-		Utilities.openChromeBrowser();
+		Utilities.openBrowser();
 	}
 
 	@AfterMethod
 	public void afterMethod() {
 		System.out.println("Post-condition");
-		Utilities.closesAllChromeBrowserWindows();
+		Utilities.closesAllBrowsers();
 	}
 
 	@Test(description = "User can change password")
 	public void TC09() {
-
 		homePage.open();
-		homePage.gotoPage(TAB_NAME.LOGIN);
-		loginPage.login(Constant.VALID_USERNAME, Constant.VALID_PASSWORD);
-		
-		homePage.gotoPage(TAB_NAME.CHANGE_PASSWORD);
+		homePage.gotoPage(TabName.LOGIN);
+		loginPage.login(Constant.VALID_USERNAME, Constant.VALID_PASSWORD);		
+		homePage.gotoPage(TabName.CHANGE_PASSWORD);
 		changePasswordPage.changePassword(Constant.VALID_PASSWORD, Constant.NEW_PASSWORD, Constant.NEW_PASSWORD);
-		Assert.assertEquals(changePasswordPage.getSuccessMessage(), Constant.Message.CHANGE_PASSWORD_SUCCESS_MESSAGE);
+		assertEquals(changePasswordPage.getSuccessMessage(), Constant.Message.CHANGE_PASSWORD_SUCCESS_MESSAGE);
 	}
 }

@@ -1,10 +1,6 @@
-package Railway;
-
+package PageObjects.Railway;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
-import Common.ElementKeywords;
-import Constant.Constant;
+import Common.Common.ElementKeywords;
 
 public class LoginPage extends GeneralPage {
 
@@ -13,6 +9,7 @@ public class LoginPage extends GeneralPage {
 	private final By txtPassword = By.id("password");
 	private final By btnLogin = By.xpath("//input[@value='login']");
 	private final By lblLoginErrorMsg = By.xpath("//p[@class='message error LoginForm']");
+	private final By linkForgotPassword = By.xpath("//a[.='Forgot Password page']");
 
 	// Methods
 
@@ -22,16 +19,18 @@ public class LoginPage extends GeneralPage {
 		ElementKeywords.click(btnLogin);
 	}
 
+	public void login(String username, String password, int time) {
+		for (int i = 0; i < time; i++) {
+			this.login(username, password);
+		}
+	}
+		
 	public String getErrorLoginMessage() {
 		return ElementKeywords.getText(lblLoginErrorMsg);
 	}
 
-	public void loginFailServeralTimes(String username, String password, int time) {
-		for (int i = 0; i < time; i++) {
-			ElementKeywords.enter(txtUsername, username);
-			ElementKeywords.enter(txtPassword, password);
-			ElementKeywords.click(btnLogin);
-		}
+	public void gotoForgotPasswordPage() {
+		ElementKeywords.click(linkForgotPassword);
 	}
 
 }

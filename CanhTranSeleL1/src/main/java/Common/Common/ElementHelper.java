@@ -1,12 +1,11 @@
-package Common;
+package Common.Common;
 
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebElement;
 
-import Constant.Constant;
+import Common.Constant.Constant;
 
 public class ElementHelper {
 

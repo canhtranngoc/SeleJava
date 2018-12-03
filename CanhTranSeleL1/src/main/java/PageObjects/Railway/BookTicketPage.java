@@ -1,7 +1,6 @@
-package Railway;
-
+package PageObjects.Railway;
 import org.openqa.selenium.By;
-import Common.ElementKeywords;
+import Common.Common.ElementKeywords;
 
 public class BookTicketPage extends GeneralPage {
 	// Locators
@@ -11,7 +10,7 @@ public class BookTicketPage extends GeneralPage {
 	private final By dropdownSeatType = By.name("SeatType");
 	private final By dropdownTicketAmount = By.name("TicketAmount");
 	private final By btnBookTicket = By.xpath("//input[@value='Book ticket']");
-	private final By lblSuccessMessage = By.xpath("//h1[.='Ticket booked successfully!']");
+	//private final By lblSuccessMessage = By.xpath("//h1[.='Ticket booked successfully!']");
 
 	// Methods
 	public void BookTickets(String departDate, String departStation, String arriveStation, String seatType,

@@ -1,10 +1,4 @@
-package Constant;
-
-import java.sql.Date;
-import Common.Utilities;
-import java.util.Calendar;
-import java.time.ZonedDateTime;
-
+package Common.Constant;
 
 import org.openqa.selenium.WebDriver;
 
@@ -13,12 +7,11 @@ public class Constant {
 	public static final String RAILWAY_URL = "https://dbdeec00.ngrok.io/Page/HomePage.cshtml";
 	public static final String VALID_USERNAME = "canh.tran@logigear.com";
 	public static final String INVALID_USERNAME = "canh.tran.ngoc@logigear.com";
-	public static final String BLANK_USERNAME = "";
+	public static final String EMPTY = "";
 	public static final String VALID_PASSWORD = "12345678";
 	public static final String INVALID_PASSWORD = "11111111";
-	public static final String BLANK_PASSWORD = "";
 	public static final String NEW_PASSWORD = "12345678";
-	public static final String RANDOM_EMAIL = "canh+"+ Utilities.randomString()+"@logigear.com";	
+	public static final String RANDOM_EMAIL = "canh+" + System.currentTimeMillis() + "@logigear.com";
 	public static final String VALID_PID = "123456789";
 	public static final int SERVERAL_TIME_LOGIN_FAIL = 4;
 
@@ -30,11 +23,11 @@ public class Constant {
 		public static final String INACTIVE_ACCOUNT_LOGIN_ERROR_MESSAGE = "Invalid username or password. Please try again.";
 		public static final String REGISTER_ERROR_MESSAGE = "There're errors in the form. Please correct the errors and try again.";
 		public static final String REGISTER_SUCCESS_MESSAGE = "Thank you for registering your account";
-		public static final String CHANGE_PASSWORD_SUCCESS_MESSAGE = "Your password has been updated";	
-		public static final String INVALID_PASSWORD_MESSAGE="Invalid password length.";
-		public static final String INVALID_ID_MESSAGE="Invalid ID length.";
+		public static final String CHANGE_PASSWORD_SUCCESS_MESSAGE = "Your password has been updated";
+		public static final String INVALID_PASSWORD_MESSAGE = "Invalid password length.";
+		public static final String INVALID_ID_MESSAGE = "Invalid ID length.";
 	}
-	
+
 	public class PageHeader {
 		public static final String HOME_PAGE = "Welcome to QA Railway";
 		public static final String FAQ_PAGE = "Frequently Asked Questions";
@@ -47,22 +40,14 @@ public class Constant {
 		public static final String LOGIN_PAGE = "Login page";
 	}
 
-	public static enum TAB_NAME {
-		HOME("Home"), 
-		FAQ("FAQ"),
-		CONTACT("Contact"),
-		TIMETABLE("Timetable"),
-		TICKET_PRICE("Ticket price"),
-		BOOK_TICKET("Book ticket"),
-		REGISTER("Register"),
-		LOGIN("Login"), 
-		LOGOUT("Log out"), 		 
-		MYTICKET("My ticket"), 
+	public static enum TabName {
+		HOME("Home"), FAQ("FAQ"), CONTACT("Contact"), TIMETABLE("Timetable"), TICKET_PRICE("Ticket price"),
+		BOOK_TICKET("Book ticket"), REGISTER("Register"), LOGIN("Login"), LOGOUT("Log out"), MYTICKET("My ticket"),
 		CHANGE_PASSWORD("Change password");
-		
+
 		private String tabName;
 
-		private TAB_NAME(String tabName) {
+		private TabName(String tabName) {
 			this.tabName = tabName;
 		}
 
@@ -70,15 +55,11 @@ public class Constant {
 			return tabName;
 		}
 	}
-	
+
 	public static enum DEPART_STATION {
-		SAI_GON("Sài Gòn"), 
-		PHAN_THIET("Phan Thiết"),
-		NHA_TRANG("Nha Trang"),
-		DA_NANG("Đà Nẵng"),
-		HUE("Huế"),
+		SAI_GON("Sài Gòn"), PHAN_THIET("Phan Thiết"), NHA_TRANG("Nha Trang"), DA_NANG("Đà Nẵng"), HUE("Huế"),
 		QUANG_NGAI("Quảng Ngãi");
-		
+
 		private String departStation;
 
 		private DEPART_STATION(String departStation) {
@@ -89,15 +70,11 @@ public class Constant {
 			return this.departStation;
 		}
 	}
-	
+
 	public static enum ARRIVE_STATION {
-		SAI_GON("Sài Gòn"), 
-		PHAN_THIET("Phan Thiết"),
-		NHA_TRANG("Nha Trang"),
-		DA_NANG("Đà Nẵng"),
-		HUE("Huế"),
+		SAI_GON("Sài Gòn"), PHAN_THIET("Phan Thiết"), NHA_TRANG("Nha Trang"), DA_NANG("Đà Nẵng"), HUE("Huế"),
 		QUANG_NGAI("Quảng Ngãi");
-		
+
 		private String arriveStation;
 
 		private ARRIVE_STATION(String arriveStation) {
@@ -108,15 +85,11 @@ public class Constant {
 			return this.arriveStation;
 		}
 	}
-	
+
 	public static enum SEAT_TYPE {
-		HARD_SEAT("Hard seat"), 
-		SORT_SEAT("Soft seat"),
-		SORT_SEAT_WITH_AIR_CONDITINER("Soft seat with air conditioner"),
-		HARD_BED("Hard bed"),
-		SORT_BED("Soft bed"),
-		SORT_BED_WITH_AIR_CONDITINER("Soft bed with air conditioner");
-		
+		HARD_SEAT("Hard seat"), SORT_SEAT("Soft seat"), SORT_SEAT_WITH_AIR_CONDITINER("Soft seat with air conditioner"),
+		HARD_BED("Hard bed"), SORT_BED("Soft bed"), SORT_BED_WITH_AIR_CONDITINER("Soft bed with air conditioner");
+
 		private String seatType;
 
 		private SEAT_TYPE(String seatType) {
@@ -127,5 +100,5 @@ public class Constant {
 			return this.seatType;
 		}
 	}
-	
+
 }
