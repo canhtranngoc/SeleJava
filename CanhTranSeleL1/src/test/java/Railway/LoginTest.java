@@ -63,7 +63,7 @@ public class LoginTest {
 	public void TC05() {
 		homePage.open();
 		homePage.gotoPage(TabName.LOGIN);
-		loginPage.login(Constant.VALID_USERNAME, Constant.INVALID_PASSWORD,Constant.SERVERAL_TIME_LOGIN_FAIL);
+		loginPage.login(Constant.VALID_USERNAME, Constant.INVALID_PASSWORD, Constant.SERVERAL_TIME_LOGIN_FAIL);
 		assertEquals(loginPage.getErrorLoginMessage(), Constant.Message.LOGIN_FOR_SERVERAL_TIMES_ERROR_MESSAGE);
 	}
 
@@ -72,14 +72,14 @@ public class LoginTest {
 		homePage.open();
 		homePage.gotoPage(TabName.LOGIN);
 		loginPage.login(Constant.VALID_USERNAME, Constant.VALID_PASSWORD);
-		homePage.isTabDisplayed("My ticket");
-		homePage.isTabDisplayed("Change password");
-		homePage.isTabDisplayed("Logout");
-		SoftAssert softAssert = new SoftAssert();		
-		homePage.gotoPage(TabName.MYTICKET);
+		SoftAssert softAssert = new SoftAssert();
+		softAssert.assertTrue(homePage.isTabDisplayed(TabName.MY_TICKET.getValue()));
+		softAssert.assertTrue(homePage.isTabDisplayed(TabName.CHANGE_PASSWORD.getValue()));
+		softAssert.assertTrue(homePage.isTabDisplayed(TabName.LOGOUT.getValue()));
+		homePage.gotoPage(TabName.MY_TICKET);
 		softAssert.assertEquals(homePage.getPageHeader(), Constant.PageHeader.MY_TICKET_PAGE);
 		homePage.gotoPage(TabName.CHANGE_PASSWORD);
-		softAssert.assertEquals(homePage.getPageHeader(), Constant.PageHeader.CHANGE_PASSWORD_PAGE);		
+		softAssert.assertEquals(homePage.getPageHeader(), Constant.PageHeader.CHANGE_PASSWORD_PAGE);
 		softAssert.assertAll();
 	}
 

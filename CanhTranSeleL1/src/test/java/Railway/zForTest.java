@@ -71,7 +71,7 @@ public class zForTest {
 		//final By txtMailBox = By.id("InboxCtrl");
 		//final By btnGo = By.xpath("//button[.='Go!']");
 		
-		Common.Common.ElementKeywords.enter(By.xpath("//input[@id='inbox_field']"), "canh+1987");
+		Common.Common.ElementKeywords.enter(By.xpath("//input[@id='inbox_field']"), "canh+11987");
 		Common.Common.ElementKeywords.click(By.xpath("//button[.='Go!']"));
 		
 		Constant.WEBDRIVER.findElement(By.xpath("//td[contains(.,'Canh Tran Ngoc')]")).click();

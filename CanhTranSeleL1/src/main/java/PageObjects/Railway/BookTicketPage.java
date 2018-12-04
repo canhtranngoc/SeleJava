@@ -22,5 +22,13 @@ public class BookTicketPage extends GeneralPage {
 		ElementKeywords.select(dropdownTicketAmount, ticketAmount);
 		ElementKeywords.click(btnBookTicket);
 	}
+	
+	public String getDepartStationValue() {
+		return ElementKeywords.getText(dropdownDepartStation);
+	}
+	
+	public String getArriveStationValue() {
+		return ElementKeywords.getText(dropdownArriveStation);
+	}
 
 }
