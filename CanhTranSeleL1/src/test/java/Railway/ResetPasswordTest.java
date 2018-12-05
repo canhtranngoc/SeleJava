@@ -34,7 +34,8 @@ public class ResetPasswordTest {
 		homePage.open();
 		homePage.gotoPage(TabName.LOGIN);
 		loginPage.gotoForgotPasswordPage();
-		forgotPasswordPage.sendInstruction("canh+11987@mailinator.com");
+		forgotPasswordPage.sendInstruction("canhtn92+112@gmail.com");
+		Utilities.openResetPasswordlink();
 		
 	}
 
