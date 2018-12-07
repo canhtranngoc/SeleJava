@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import Common.Constant.Constant;
 
+
 public class ElementKeywords {
 
 	public static void enter(By by, String value) {
@@ -28,4 +29,5 @@ public class ElementKeywords {
 		Select select = new Select(Constant.WEBDRIVER.findElement(locator));
 		select.selectByVisibleText(option);
 	}
+
 }

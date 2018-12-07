@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 public class Constant {
 	public static WebDriver WEBDRIVER;
-	public static final String RAILWAY_URL = "https://dbdeec00.ngrok.io/Page/HomePage.cshtml";
+	public static final String RAILWAY_URL = "http://192.168.189.206:8888/Page/HomePage.cshtml";
 	public static final String VALID_USERNAME = "canh.tran@logigear.com";
 	public static final String INVALID_USERNAME = "canh.tran.ngoc@logigear.com";
 	public static final String EMPTY = "";
@@ -14,6 +14,7 @@ public class Constant {
 	public static final String RANDOM_EMAIL = "canh+" + System.currentTimeMillis() + "@logigear.com";
 	public static final String VALID_PID = "123456789";
 	public static final int SERVERAL_TIME_LOGIN_FAIL = 4;
+	public static final String MAILINATOR_URL= "https://www.mailinator.com/v3/index.jsp?zone=public&query=canh.tran/#/#inboxpane";
 
 	public class Message {
 		public static final String WELLCOME_MESSAGE = "Welcome " + VALID_USERNAME;
@@ -26,6 +27,7 @@ public class Constant {
 		public static final String CHANGE_PASSWORD_SUCCESS_MESSAGE = "Your password has been updated";
 		public static final String INVALID_PASSWORD_MESSAGE = "Invalid password length.";
 		public static final String INVALID_ID_MESSAGE = "Invalid ID length.";
+		public static final String BOOK_TICKETS_SUCCESS_MESSAGE = "Ticket booked successfully!";
 	}
 
 	public class PageHeader {
